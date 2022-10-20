@@ -1,11 +1,24 @@
-type Faculties = Array<faculty>
-type faculty = {
-    id: number,
-    faculty: string,
-    subjects: string[],
+
+type FacultiesObject = {
+    id: number | null,
+    faculty: 'History department'
+        | 'Department of Biology'
+        | 'Faculty of Mathematics'
+        | 'Faculty of Design',
+    subjects: Array<'The World History'
+        | 'History of Rome'
+        | 'biology'
+        | 'chemistry'
+        | 'trigonometry'
+        | 'ui'
+        | 'ux'
+        | 'graphic design'
+        | 'mathematics'
+        | 'geometry'>,
     countStudents: number
 }
-const faculties: Faculties = [
+
+const faculties: Array<FacultiesObject> = [
     {
         id: 1,
         faculty: "History department",
@@ -31,8 +44,7 @@ const faculties: Faculties = [
         countStudents: 37
     }
 ]
-type Movies = Array<movie>
-type movie = {
+type MoviesObject = {
     id: number,
     title: string,
     year: number,
@@ -51,7 +63,8 @@ type movie = {
     boxOffice: string,
     production: string,
 }
-const movies: Movies = [
+
+const movies: Array<MoviesObject> = [
     {
         id: 1,
         title: "Black Widow",
